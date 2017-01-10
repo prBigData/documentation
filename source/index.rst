@@ -8,8 +8,11 @@ Welcome to prdw's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
+   introduction
+   installation
+   scrappers
+   heatmaps
 
 
 Indices and tables
