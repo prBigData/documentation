@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'prdw'
-copyright = u'2017, Anaig Marechal, Valentin Paul, Pierre Waschalski, Paul Goujon'
+copyright = u'2017, Anaig Marechal, Valentin Paul, Pierre Wachalski, Paul Goujon'
 author = u'Anaig Marechal, Valentin Paul, Pierre Waschalski, Paul Goujon'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -153,6 +153,3 @@ texinfo_documents = [
      author, 'prdw', 'One line description of project.',
      'Miscellaneous'),
 ]
-
-
-

@@ -12,6 +12,7 @@ Welcome to prdw's documentation!
    introduction
    installation
    scrappers
+   cassandra
    heatmaps
 
 
