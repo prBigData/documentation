@@ -4,7 +4,7 @@ Installation Guide
 
 
 **********************
-Dowloading the project
+Downloading the project
 **********************
 
 The project is available on Github or you can ask for the sources
@@ -81,4 +81,3 @@ When your python environment is ready, you can install any python dependency req
 .. code-block:: bash
 
     pip install -r requirements.txt
-
