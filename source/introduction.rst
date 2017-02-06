@@ -40,9 +40,6 @@ More specifically, here are some details on the splitting :
 * **Future prospects** : report and documentation
 
 
-
-
-
 ========================================
 Getting to work on the project - 5 steps
 ========================================
@@ -50,16 +47,23 @@ Getting to work on the project - 5 steps
 If you are part of a new team working on this PRDW project, we suggest you proceed the following way :
 
 1. Get used to the linux environment and the development server if you're not
-2. Read & understand the scraper's doc, and set it up if not already done
+2. Read & understand the scrapers' doc, and set it up if not already done
 3. Read the project report to understand the technologic choices we have done for our Big Data architecture. You can begin to question it, but we advise you not to try a new architecture unless you've accomplished at least a bit of data analysis first
-4. Get used to the pyspark shell and using our python scripts to generate the density maps
+4. Get used to the pyspark shell and using our data analysis scripts in order to make your own in the future
 5. GO AHEAD : think about new data mining algorithms, and implement it
 
 
+How we size tasks on that project
+---------------------------------
+
+Here is a kind of calendar we would advise any new UTC group to follow :
+
+* **Reading & uderstanding our project / setting it up / getting used to the different technologies** : 1 month
+* **Studying and thinking new data analysis algorithms** : 2 months
+* **Implementing these algorithms** : 1 month
+* **MANDATORY / REALLY REALLY IMPORTANT documenting what they have done + final report** : 1 month
 
 
-
-------------
 Good to know
 ------------
 
