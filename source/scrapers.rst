@@ -163,13 +163,13 @@ The main principle of that scraper is to try to get at day d+1 as much informati
 Algorithm
 =========
 
-The developed algoithm can be sumed up as follows :
+The developed algoithm can be sumed up as follows (cron) :
 
 .. code-block:: text
 
     1. Open and read the mmsi list file exported the previous day
     2. Generate a list of URLs to query
-    3. Spawn a "spider" that will request, parse and export additionnal information at each URLs of the list
+    3. Spawn a "spider" that will request, parse and export additionnal information from each URL of the list
 
 This "spider" is a helper class we have handwritten (named after scrapy's spiders) providing us with several useful scraping and parsing methods. When calling the scrap method of the spider, it will proceed as follows :
 
@@ -178,9 +178,9 @@ This "spider" is a helper class we have handwritten (named after scrapy's spider
     1. FOR EACH url passed to the constructor
         a. make an HTTP request to get the additionnal info html page from vesselfinder
         b. parse the response page
-        c. post treat the parsing results if necessary
+        c. post-treat the parsing results if necessary
         d. append the additional infos on that vessel to the additional info export file
-        e. store it cassandra as well
+        e. store it in cassandra as well
         f. SLEEP(SLEEP_DELAY)
 
 
@@ -190,7 +190,7 @@ NB
 Again, there might be some tricky parts to understand within our code.
 
 * It is bit messy (we admit) : not so straightforward ("why the f... did they put that here ?") as we developed it iteratively, adding features step by step
-* ABOUT THE SLEEP DELAY : why isn't it fixed ? why a sleep delay ? => Mainly because we obviously couldn't afford to request information several thousands vessels at the same time to vesselfinder's severs (which would have meant xxxx calls at the same time to their API). So we have decided to smoothly request it all along 22hours of a day. So the sleep delay is in fact 22hours divided by the number of detected vessels the previous day.
+* ABOUT THE SLEEP DELAY : why isn't it constant ? why a sleep delay ? => Mainly because we obviously couldn't afford to request information on several thousands vessels at the same time to vesselfinder's servers (which would have meant xxxx calls at the same time to load html additional info pages). So we have decided to smoothly request it all along 22hours of a day. So the sleep delay is in fact 22hours divided by the number of detected vessels the previous day.
 
 ================================
 How to set the second scraper up
@@ -212,9 +212,18 @@ This second scraper uses two scripts : "cron.py" and "spider.py"
         __init__.py
         cron.py
 
-2. Edit the linux crontab so that it launches the "cron.py" script on a daily basis
+2. Edit the linux `crontab <http://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/>`_ so that it launches the "cron.py" script on a daily basis.
 
-TO DO here
+.. code-block:: bash
+
+    $ sudo crontab -e
+
+    (add this line)
+    05 00 * * * cd /home/goujonpa/prod/ && python cron_get_data2.py > /home/goujonpa/prod/cron.log 2>&1
+    (save and close)
+
+
+Reading the crontab doc explains this line : at the 05th minute of the 00th hour of every day of every month of every year, change directory going to the folder where is located the cron.py file, and launch this script logging into the cron.log file.
 
 
 That's all !
@@ -224,9 +233,16 @@ That's all !
 How to launch it
 ================
 
+Linux crontab will automatically launch the cron script every day at the time you specified. Then the cron and the spider will work by themselves and export the parsing results into the specified file.
 
-Linux crontab will automatically launch the cron script every day at the time you specified. Then the cron and the spider will work by themselves.
 
+Monitoring the scripts execution
+--------------------------------
+
+We log into several log files :
+
+* **cron.log** : logs for the cron script
+* **spider.log** : the spider's logs
 
 
 ====================
@@ -235,14 +251,8 @@ Second scraper fails
 
 Once again, here are some of our aborted tries :
 
-* Scraping `marine traffic`_'s website : we were detected as robots after 5 calls
-* Scraping `aishub`_'s website : almost none of the vessels we detected from our first scraper was available in their database
-
-
-.. _marine traffic: http://www.marinetraffic.com/
-
-.. _aishub: http://www.aishub.net/vessels-database.php
-
+* Scraping `http://www.marinetraffic.com/ <http://www.marinetraffic.com/>`_'s website : we were detected as robots after 5 calls
+* Scraping `http://www.aishub.net/vessels-database.php <http://www.aishub.net/vessels-database.php>`_'s website : almost none of the vessels we detected from our first scraper was available in their database
 
 
 **********
