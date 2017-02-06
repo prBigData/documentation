@@ -14,7 +14,8 @@ Welcome to prdw's documentation!
    scrapers
    sparkcassandra
    heatmaps
-   perspectives
+   documentation
+   outlooks
 
 
 Indices and tables

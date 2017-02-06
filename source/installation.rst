@@ -2,10 +2,8 @@
 Installation Guide
 ##################
 
-TO BE CHECKED
-
 ***********************
-Downloading the project
+Project sources
 ***********************
 
 The project is available on Github or you can ask for the sources
@@ -14,9 +12,7 @@ The project is available on Github or you can ask for the sources
 Github Fork
 ===========
 
-The organisation's repo can be found on `github, PR Big Data`_.
-
-.. _github, PR Big Data: https://github.com/prBigData
+The organisation's repo can be found at `https://github.com/prBigData <https://github.com/prBigData>`_.
 
 There, you can find the sources of the different parts of the project, more specifically :
 
