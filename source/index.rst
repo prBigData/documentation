@@ -10,10 +10,12 @@ Welcome to prdw's documentation!
    :maxdepth: 2
 
    introduction
+   report
    installation
-   scrappers
-   cassandra
+   scrapers
+   sparkcassandra
    heatmaps
+   perspectives
 
 
 Indices and tables
