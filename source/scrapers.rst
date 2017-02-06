@@ -42,17 +42,17 @@ The developed algorithm can be sumed up as :
 .. code-block:: text
 
     1. WHILE (TRUE) :
-        a. Make an HTTP request to get any vessel in a given zone calling vesselfinder's servers
+        a. Make an HTTP request to get any vessel in a given zone, calling vesselfinder's servers
         b. Open the current vessels positions export file and get the currently saved positions list
         c. FOR line (= vessel) IN the HTTP response :
             i.  parse the line
             ii. format the vessel's data
             iii. store it into cassandra
             iv. append the vessel's data to the currently saved positions list
-            v. append the current vessel's mmsi to the current iteration mmsi list
-        d. save the resulting position list into the export file
+            v. append the current vessel's mmsi to the current mmsi list
+        d. save the resulting position list into the positions export file
         e. read the daily mmsi list file and get the already detected mmsi
-        f. merge the already detected mmsi list with the current iteration mmsi list
+        f. merge the already detected mmsi list with the current mmsi list
         g. SLEEP(60)
 
 
@@ -90,44 +90,58 @@ That's all
 How to launch the first scraper
 ===============================
 
-When set up, we have launched and controlled the script within a tmux session. If you're not used with tmux, we advice you to read this really concise guide : `tmux`_
+When set up, we have launched and controlled the script within a tmux session. If you're not used with tmux, we advice you to read this really concise guide : `https://danielmiessler.com/study/tmux/ <https://danielmiessler.com/study/tmux/>`_
 
-
-.. _tmux: http://
-
-
---------------------
 Launching the script
 --------------------
 
-This way you can launch the script connecting to your tmux session then launching it (don't forget to log :) ) :
+First create a tmux session, then launch your "daemon" script within it, then detach from the tmux session :
 
 .. code-block:: bash
 
-    tmux truc
-    python get_data.py > get_data.log 2>&1
-    TO CHECK (both lines)
+    $ tmux new -s scraper1
+    $ python get_data.py > get_data.log 2>&1
+    $ ctrl-b d     (like any keyboard shortcut)
+    [detached (from session scraper1)]
 
 
-------------------
 Killing the script
 ------------------
 
-And you can kill your script, again, connecting to your tmux session and sending the kill signal :
+You can check any active tmux session by using :
+
+.. code-block:: bash
+
+    $ tmux ls
+    scraper1: 1 windows (created Mon Feb  6 19:19:13 2017) [89x48]
+
+Then you can re-attach to that session and kill your script before exiting the tmux session by using :
 
 
 .. code-block:: bash
 
-    tmux truc
-    ^C
-    TO CHECK (both lines)
+    $ tmux a -t scraper1
+    $ ctrl-c
+    $ ctrl-d
+
+
+Monitoring the script
+---------------------
+
+You can monitor the scripts logs by simply following the tail of the logs :
+
+.. code-block:: bash
+
+    $ tail -f get_data.log
+
+You can use the same command to check for the evolution of the export file while stuff is written in it.
 
 
 ===================
 First scraper fails
 ===================
 
-We have had difficulties building these two scrapers, here are some aborted tries (so that you don't do the same mistakes again):
+For the record, we have had difficulties building these two scrapers, here are some aborted tries (so that you don't do the same mistakes again):
 
 * Using a node.js crawler : we didn't have enough experience
 * Using the scrapy python module : overkill
