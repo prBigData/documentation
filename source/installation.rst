@@ -16,27 +16,25 @@ The organisation's repo can be found at `https://github.com/prBigData <https://g
 
 There, you can find the sources of the different parts of the project, more specifically :
 
-* The scrapers code : `github, scraper`_
-* The heatmaps generation scripts : `github, heatmaps`_
+* The scrapers code : `https://github.com/prBigData/scraper <https://github.com/prBigData/scraper>`_
+* The heatmaps generation scripts : `https://github.com/prBigData/heatmaps <https://github.com/prBigData/heatmaps>`_
 
-.. _github, scraper: https://github.com/prBigData/aisdata
-
-.. _github, heatmaps: https://github.com/prBigData/datatreatment
 
 As for any public github project, you can fork the source code, and clone the repo locally, e.g.
 
 .. code-block:: bash
 
-    mkdir project
-    cd project
-    git clone https://github.com/prBigData/datatreatment.git
+    mkdir prdw
+    cd prdw
+    git clone https://github.com/prBigData/scraper.git
 
+(Obviously the project url won't be the same, if you fork the repo)
 
-======================
-Asking for source code
-======================
+=====================================
+Asking for source code or permissions
+=====================================
 
-As an alternative, you can also ask me for the full sources by email (available on my github profile)
+As an alternative, you can also ask for the rights on the repo, or the full sources (available on my github profile)
 
 
 ***********************
@@ -49,20 +47,15 @@ The next thing to do is to setup your python environment.
 Python version
 ==============
 
-The version we used to develop the project is python 2.7.11. Make sure your python version is the same if you to make sure the script work for you
+We used python 2.7.11. to develop the different scripts composing the project. Make sure your python version is the same if you want to make sure the scripts work for you
 
 ================
 Pip & Virtualenv
 ================
 
-Python should be supplied with a working version of `pypi`_.
+Python should be supplied with a working version of `pypi <https://pypi.python.org/pypi>`_.
 
-.. _pypi: https://pypi.python.org/pypi
-
-What you may want to do now is to set up a virtual environment for working with python, in order to avoid messing up your other python projects. We strongly advice that you get to know python's `virtualenv module`_ if you don't know it yet.
-
-.. _virtualenv module: http://docs.python-guide.org/en/latest/dev/virtualenvs/
-
+What you may want to do now is to set up a virtual environment for working with python, in order to avoid messing up your other python projects. We strongly advice that you get to know python's `virtualenv module <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_ if you don't know it yet.
 
 .. warning::
 
@@ -73,13 +66,11 @@ What you may want to do now is to set up a virtual environment for working with 
 Dependencies and requirements
 =============================
 
-When your python environment is ready, you can install all the python dependencies we used for our projects by using
+When your python environment is ready, you can install dependencies of each project within each of your environment by simply using the "requirements.txt" files as follows :
 
 .. code-block:: bash
 
     pip install -r requirements.txt
 
-Or may use pip to install any new python module the usual way. Here is a list of required modules to run our scripts :
-
-TO DO
+Otherwise you can use pip to install any new python module the usual way. We provide a list of dependencies for each part of the project in the corresponding section of the documentation.
 
