@@ -10,7 +10,6 @@ Welcome to prdw's documentation!
    :maxdepth: 2
 
    introduction
-   report
    installation
    scrapers
    sparkcassandra
