@@ -1,8 +1,8 @@
-############
-Perspectives
-############
+################
+Future Prospects
+################
 
-We ended up that project with some perspectives with its future. Here are listed some of the ideas and concepts we would have liked to dig, and hope you'll find time to develop.
+We ended up that project with some outlooks with its future. Here are listed some of the ideas and concepts we would have liked to dig, and hope you'll find time to develop.
 
 * blabla1
 * blabla2
