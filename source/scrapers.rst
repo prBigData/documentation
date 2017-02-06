@@ -11,10 +11,20 @@ cron and stuff scraper 2
 Introduction
 ************
 
-No dataset was supplied at the beginning of our PRDW. We have had to get data our own way. To do so, we've built two scrapers allowing us to get `vesselfinder`_'s data for free.
+No dataset was supplied at the beginning of our PRDW. We have had to get data our own way. To do so, we've built two scrapers allowing us to get `https://www.vesselfinder.com/ <https://www.vesselfinder.com/>`_'s data for free.
 
 
-.. _vesselfinder: https://www.vesselfinder.com/
+************************************
+Getting used to the technology stack
+************************************
+
+To learn quickly the required technologies, here are some useful links :
+
+* **Python** : `https://www.tutorialspoint.com/python/ <https://www.tutorialspoint.com/python/>`_
+* **Python's request module** : `http://docs.python-requests.org/en/master/ <http://docs.python-requests.org/en/master/>`_
+* **XPath** : `http://lxml.de/xpathxslt.html <http://lxml.de/xpathxslt.html>`_
+* **tmux** : `https://danielmiessler.com/study/tmux/ <https://danielmiessler.com/study/tmux/#gs.gpLb2M0>`_
+* **linux crontab** : `http://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/ <http://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/>`_
 
 
 **********************************
