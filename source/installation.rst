@@ -2,10 +2,11 @@
 Installation Guide
 ##################
 
+TO BE CHECKED
 
-**********************
+***********************
 Downloading the project
-**********************
+***********************
 
 The project is available on Github or you can ask for the sources
 
@@ -19,12 +20,12 @@ The organisation's repo can be found on `github, PR Big Data`_.
 
 There, you can find the sources of the different parts of the project, more specifically :
 
-* The scrapper's code : `github, aisdata`_
-* The heatmaps generation scripts : `github, datatreatment`_
+* The scrapers code : `github, scraper`_
+* The heatmaps generation scripts : `github, heatmaps`_
 
-.. _github, aisdata: https://github.com/prBigData/aisdata
+.. _github, scraper: https://github.com/prBigData/aisdata
 
-.. _github, datatreatment: https://github.com/prBigData/datatreatment
+.. _github, heatmaps: https://github.com/prBigData/datatreatment
 
 As for any public github project, you can fork the source code, and clone the repo locally, e.g.
 
@@ -76,8 +77,13 @@ What you may want to do now is to set up a virtual environment for working with 
 Dependencies and requirements
 =============================
 
-When your python environment is ready, you can install any python dependency required for a project by using
+When your python environment is ready, you can install all the python dependencies we used for our projects by using
 
 .. code-block:: bash
 
     pip install -r requirements.txt
+
+Or may use pip to install any new python module the usual way. Here is a list of required modules to run our scripts :
+
+TO DO
+
