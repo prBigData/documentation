@@ -1,0 +1,404 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Scrapers &mdash; documentation prdw 1</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Recherche" href="search.html"/>
+    <link rel="top" title="documentation prdw 1" href="index.html"/>
+        <link rel="next" title="Spark and Cassandra" href="sparkcassandra.html"/>
+        <link rel="prev" title="Installation Guide" href="installation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> prdw
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Project Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scrapers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-scraper-position-s-scraper">FIRST SCRAPER : position&#8217;s scraper</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#algorithm">Algorithm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nb">NB</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-set-the-first-scraper-up">How to set the first scraper up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-launch-the-first-scraper">How to launch the first scraper</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#launching-the-script">Launching the script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#killing-the-script">Killing the script</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#first-scraper-fails">First scraper fails</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#second-scraper-the-additionnal-information-scraper">SECOND SCRAPER : The additionnal information scraper</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-principle">Main principle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Algorithm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">NB</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-set-the-second-scraper-up">How to set the second scraper up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-launch-it">How to launch it</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#second-scraper-fails">Second scraper fails</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sparkcassandra.html">Spark and Cassandra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heatmaps.html">Heatmaps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perspectives.html">Perspectives</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">prdw</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Scrapers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/scrapers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scrapers">
+<h1>Scrapers<a class="headerlink" href="#scrapers" title="Lien permanent vers ce titre">¶</a></h1>
+<p>TO CHECK :
+tmux
+illustration
+cron and stuff scraper 2</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>No dataset was supplied at the beginning of our PRDW. We have had to get data our own way. To do so, we&#8217;ve built two scrapers allowing us to get <a class="reference external" href="https://www.vesselfinder.com/">vesselfinder</a>&#8216;s data for free.</p>
+</div>
+<div class="section" id="first-scraper-position-s-scraper">
+<h2>FIRST SCRAPER : position&#8217;s scraper<a class="headerlink" href="#first-scraper-position-s-scraper" title="Lien permanent vers ce titre">¶</a></h2>
+<p>First we&#8217;ve developed a scraper to get the vesselfinder&#8217;s front page data. We reproduce our browser&#8217;s AJAX calls, done every minute to vesselfinder&#8217;s servers to update the vessels map.</p>
+<div class="section" id="algorithm">
+<h3>Algorithm<a class="headerlink" href="#algorithm" title="Lien permanent vers ce titre">¶</a></h3>
+<p>The developed algorithm can be sumed up as :</p>
+<div class="highlight-text"><div class="highlight"><pre>1. WHILE (TRUE) :
+    a. Make an HTTP request to get any vessel in a given zone calling vesselfinder&#39;s servers
+    b. Open the current vessels positions export file and get the currently saved positions list
+    c. FOR line (= vessel) IN the HTTP response :
+        i.  parse the line
+        ii. format the vessel&#39;s data
+        iii. store it into cassandra
+        iv. append the vessel&#39;s data to the currently saved positions list
+        v. append the current vessel&#39;s mmsi to the current iteration mmsi list
+    d. save the resulting position list into the export file
+    e. read the daily mmsi list file and get the already detected mmsi
+    f. merge the already detected mmsi list with the current iteration mmsi list
+    g. SLEEP(60)
+</pre></div>
+</div>
+<div class="section" id="nb">
+<h4>NB<a class="headerlink" href="#nb" title="Lien permanent vers ce titre">¶</a></h4>
+<ul class="simple">
+<li>We use a new export file for the positions every hour</li>
+<li>We use a new export file for the mmsi lists every day</li>
+<li>This is achieved thanks to a strict naming convention you can observe within the code</li>
+<li>Understanding list comprehension in python is a plus, to understand our code</li>
+</ul>
+</div>
+<p></p>
+</div>
+<div class="section" id="how-to-set-the-first-scraper-up">
+<h3>How to set the first scraper up<a class="headerlink" href="#how-to-set-the-first-scraper-up" title="Lien permanent vers ce titre">¶</a></h3>
+<ol class="arabic simple">
+<li>Download the &#8220;get_data.py&#8221; script and put it into a folder which has a &#8220;mmsi_lists&#8221; subfolder as well as a &#8220;mmsi_positions&#8221; subfolder. Create them if needed</li>
+<li>Create the __init__.py files at least in the main folder</li>
+<li>Install the python dependencies</li>
+</ol>
+<p>The modules structure should be as follows :</p>
+<div class="highlight-bash"><div class="highlight"><pre>/scraper/
+    /mmsi_positions/
+    /mmsi_lists/
+    __init__.py
+    get_data.py
+</pre></div>
+</div>
+<p>That&#8217;s all</p>
+</div>
+<div class="section" id="how-to-launch-the-first-scraper">
+<h3>How to launch the first scraper<a class="headerlink" href="#how-to-launch-the-first-scraper" title="Lien permanent vers ce titre">¶</a></h3>
+<p>When set up, we have launched and controlled the script within a tmux session. If you&#8217;re not used with tmux, we advice you to read this really concise guide : <a class="reference external" href="http://">tmux</a></p>
+<div class="section" id="launching-the-script">
+<h4>Launching the script<a class="headerlink" href="#launching-the-script" title="Lien permanent vers ce titre">¶</a></h4>
+<p>This way you can launch the script connecting to your tmux session then launching it (don&#8217;t forget to log :) ) :</p>
+<div class="highlight-bash"><div class="highlight"><pre>tmux truc
+python get_data.py &gt; get_data.log 2&gt;<span class="p">&amp;</span>1
+TO CHECK <span class="o">(</span>both lines<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="killing-the-script">
+<h4>Killing the script<a class="headerlink" href="#killing-the-script" title="Lien permanent vers ce titre">¶</a></h4>
+<p>And you can kill your script, again, connecting to your tmux session and sending the kill signal :</p>
+<div class="highlight-bash"><div class="highlight"><pre>tmux truc
+^C
+TO CHECK <span class="o">(</span>both lines<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="first-scraper-fails">
+<h3>First scraper fails<a class="headerlink" href="#first-scraper-fails" title="Lien permanent vers ce titre">¶</a></h3>
+<p>We have had difficulties building these two scrapers, here are some aborted tries (so that you don&#8217;t do the same mistakes again):</p>
+<ul class="simple">
+<li>Using a node.js crawler : we didn&#8217;t have enough experience</li>
+<li>Using the scrapy python module : overkill</li>
+</ul>
+</div>
+</div>
+<div class="section" id="second-scraper-the-additionnal-information-scraper">
+<h2>SECOND SCRAPER : The additionnal information scraper<a class="headerlink" href="#second-scraper-the-additionnal-information-scraper" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Every information we needed wasn&#8217;t available from the first scraper as there was no departure nor destination information on the front map of the vesselfinder website. Hence we&#8217;ve been compelled to build a second scraper, in order to get additionnal pieces of informations on every vessel detected by the first scraper.</p>
+<div class="section" id="main-principle">
+<h3>Main principle<a class="headerlink" href="#main-principle" title="Lien permanent vers ce titre">¶</a></h3>
+<p>The main principle of that scraper is to try to get at day d+1 as much information as possible on every vessel detected by our first scraper at day d (hence the mmsi list exports !)</p>
+</div>
+<div class="section" id="id1">
+<h3>Algorithm<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>The developed algoithm can be sumed up as follows :</p>
+<div class="highlight-text"><div class="highlight"><pre>1. Open and read the mmsi list file exported the previous day
+2. Generate a list of URLs to query
+3. Spawn a &quot;spider&quot; that will request, parse and export additionnal information at each URLs of the list
+</pre></div>
+</div>
+<p>This &#8220;spider&#8221; is a helper class we have handwritten (named after scrapy&#8217;s spiders) providing us with several useful scraping and parsing methods. When calling the scrap method of the spider, it will proceed as follows :</p>
+<div class="highlight-text"><div class="highlight"><pre>1. FOR EACH url passed to the constructor
+    a. make an HTTP request to get the additionnal info html page from vesselfinder
+    b. parse the response page
+    c. post treat the parsing results if necessary
+    d. append the additional infos on that vessel to the additional info export file
+    e. store it cassandra as well
+    f. SLEEP(SLEEP_DELAY)
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h4>NB<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Again, there might be some tricky parts to understand within our code.</p>
+<ul class="simple">
+<li>It is bit messy (we admit) : not so straightforward (&#8220;why the f... did they put that here ?&#8221;) as we developed it iteratively, adding features step by step</li>
+<li>ABOUT THE SLEEP DELAY : why isn&#8217;t it fixed ? why a sleep delay ? =&gt; Mainly because we obviously couldn&#8217;t afford to request information several thousands vessels at the same time to vesselfinder&#8217;s severs (which would have meant xxxx calls at the same time to their API). So we have decided to smoothly request it all along 22hours of a day. So the sleep delay is in fact 22hours divided by the number of detected vessels the previous day.</li>
+</ul>
+</div>
+<p>* ABOUT THE SLEEP DELAY : why isn&#8217;t it fixed ? why a sleep delay ? =&gt; Mainly because we obviously couldn&#8217;t afford to request information several thousands vessels at the same time to vesselfinder&#8217;s severs (which would have meant xxxx calls at the same time to their API). So we have decided to smoothly request it all along 22hours of a day. So the sleep delay is in fact 22hours divided by the number of detected vessels the previous day.</p>
+</div>
+<div class="section" id="how-to-set-the-second-scraper-up">
+<h3>How to set the second scraper up<a class="headerlink" href="#how-to-set-the-second-scraper-up" title="Lien permanent vers ce titre">¶</a></h3>
+<p>This second scraper uses two scripts : &#8220;cron.py&#8221; and &#8220;spider.py&#8221;</p>
+<ol class="arabic simple">
+<li>Download these two files and order it using the same structure as specified above (create the subfolders and __init__.py if needed)</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre>/scraper/
+    /mmsi_lists/
+    /mmsi_infos/
+    /mmsi/
+        __init__.py
+        spider.py
+    __init__.py
+    cron.py
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Edit the linux crontab so that it launches the &#8220;cron.py&#8221; script on a daily basis</li>
+</ol>
+<p>TO DO here</p>
+<p>That&#8217;s all !</p>
+</div>
+<div class="section" id="how-to-launch-it">
+<h3>How to launch it<a class="headerlink" href="#how-to-launch-it" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Linux crontab will automatically launch the cron script every day at the time you specified. Then the cron and the spider will work by themselves.</p>
+</div>
+<div class="section" id="second-scraper-fails">
+<h3>Second scraper fails<a class="headerlink" href="#second-scraper-fails" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Once again, here are some of our aborted tries :</p>
+<ul class="simple">
+<li>Scraping <a class="reference external" href="http://www.marinetraffic.com/">marine traffic</a>&#8216;s website : we were detected as robots after 5 calls</li>
+<li>Scraping <a class="reference external" href="http://www.aishub.net/vessels-database.php">aishub</a>&#8216;s website : almost none of the vessels we detected from our first scraper was available in their database</li>
+</ul>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Once you get both scrapers set up, your working dataset gets generating. You just reached the first milestone of your project and you&#8217;re ready to go ahead to the second step before beginning the data analysis work :  building your big data architecture.</p>
+<p>Before setting up Spark and Cassandra on your server (next step of that documentation) we strongly advice you to read our project report to understand the work of technological study and comparisons that lead us through our technology choices. Then you can follow the &#8220;spark and cassandra&#8221; section of that guide to set your big data environment up.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sparkcassandra.html" class="btn btn-neutral float-right" title="Spark and Cassandra" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral" title="Installation Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Anaig Marechal, Valentin Paul, Pierre Wachalski, Paul Goujon.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
