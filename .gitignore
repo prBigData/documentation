@@ -1,6 +1,10 @@
 # virtual environment
 venv
 .DS_Store
+
+# ignore build folder
+build
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
