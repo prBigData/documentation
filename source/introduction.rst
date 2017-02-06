@@ -30,14 +30,14 @@ Finally our code is obviously on github.
 More specifically, here are some details on the splitting :
 
 
-* Scraper thinking & development steps : report
-* Scraper's algorithmics : report and documentation
-* Scraper setup & launch : documentation
-* Big data architecture thinking and development steps : report
-* Big data architecture setup & launch : documentation
-* Data analysis thinking & development : report
-* Data analysis scripts : documentation
-* Future prospects : report and documentation
+* **Scraper thinking & development steps** : report
+* **Scraper's algorithmics** : report and documentation
+* **Scraper setup & launch** : documentation
+* **Big data architecture thinking and development steps** : report
+* **Big data architecture setup & launch** : documentation
+* **Data analysis thinking & development** : report
+* **Data analysis scripts** : documentation
+* **Future prospects** : report and documentation
 
 
 
