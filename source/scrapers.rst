@@ -56,7 +56,6 @@ The developed algorithm can be sumed up as :
         g. SLEEP(60)
 
 
---
 NB
 --
 
@@ -185,7 +184,6 @@ This "spider" is a helper class we have handwritten (named after scrapy's spider
         f. SLEEP(SLEEP_DELAY)
 
 
---
 NB
 --
 
