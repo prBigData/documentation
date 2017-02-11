@@ -59,7 +59,7 @@ What you may want to do now is to set up a virtual environment for working with 
 
 .. warning::
 
-    Tip : MAKE SURE YOUR VIRTUAL ENV IS ALWAYS ACTIVATED WHEN YOU WORK ON THE PROJECT
+    Tip : always check the status (activated or not) of your virtual environment when working on your project
 
 
 =============================

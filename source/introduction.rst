@@ -69,3 +69,10 @@ Good to know
 
 We have made backups of the datasets we have collected during our project. Feel free to email us so that we send it to you, or make it available for you.
 
+
+=======================
+Note : Coding standards
+=======================
+
+We have followed the `PEP 8 <https://www.python.org/dev/peps/pep-0008/>`_ coding guideline while coding in python. We strongly advice you to continue sticking to coding standards in any language you code (there are plenty available online !)
+
