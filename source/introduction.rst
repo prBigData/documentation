@@ -37,7 +37,7 @@ More specifically, here are some details on the splitting :
 * **Big data architecture setup & launch** : documentation
 * **Data analysis thinking & development** : report
 * **Data analysis scripts** : documentation
-* **Future prospects** : report and documentation
+* **Future prospects** : report
 
 
 ========================================

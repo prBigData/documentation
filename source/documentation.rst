@@ -2,8 +2,8 @@
 Documentation
 #############
 
-Comment and Doc-comment (lol)
------------------------------
+Comment and Doc-comment
+-----------------------
 
 Even more important than working on a project : being able to transmit it !
 

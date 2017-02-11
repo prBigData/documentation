@@ -15,7 +15,6 @@ Welcome to prdw's documentation!
    sparkcassandra
    heatmaps
    documentation
-   outlooks
 
 
 Indices and tables
